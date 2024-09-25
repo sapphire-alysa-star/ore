@@ -1,0 +1,79 @@
+instructions: [{
+	name:
+	docs: doc_type
+	accounts: [{
+		name
+		isMut: "true"
+		isSigner: "false"
+		docs: ["string"]
+	}]
+	args: [{
+		name: str,
+		type: type
+	}]
+	discriminant: {
+		type: u8,
+		value: 3
+	}
+
+}]
+
+
+
+-- accounts: [{
+	name: str,
+	type: {
+		kind: "struct",
+		fields" {[type]}
+	}
+}]
+
+
+-- types: [{
+	name: str,
+	docs: doc_type,
+	kind: "struct",
+	fields: [{
+		name: str
+		type: u64,
+		docs: [string1, string2, etc]
+	}]
+}]
+types is recursive.
+name: mandatory
+kind: mandatory
+fields: optional
+docs: [string] optional
+defined: TwapOracle [this type had nothing else]
+
+type can also be an array (used for tuple). Check openbook Position Type. Field is reserved. Or OpenOrder / padding field
+
+type can also be option: "primitive_Type"
+
+Enum has a field variants
+
+
+-- EVENTS : [{
+	name: str,
+	fields: {
+		name: str,
+		type: type_str,
+		index: false
+	}
+	
+}]
+
+
+-- errors: [{
+
+	code
+	name
+	msg
+}]
+
+
+
+-- metadata: {
+	origin
+	address
+}
